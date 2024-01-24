@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  background-color: #3a3a3a;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+      width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+      width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+      width: 1170px;
+  }
+}
+.entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: solid;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #eee;
+}
+.wrongNum {
+  font-weight: bold;
+  color: red;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  gap: 10px;
+}
+
+.card {
+  width: 190px;
+  position: relative;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  min-height: 190px;
+  transition: 1s ;
+}
+.active,.done {
+  transform: rotateY(180deg);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.card .front,.card .back{
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card .front {
+  transform: rotateY(180deg);
+}
+.card .front img{
+padding: 10px;
+}
